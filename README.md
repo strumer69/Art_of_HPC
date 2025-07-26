@@ -35,4 +35,6 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 *  Load balancing
 *  Optimizing network performance
 *  Making sure MPI processes are distributed as expected
+*- 
+  #### Exercise 2.4. Write a program where each process prints out a message reporting its number, and how many processes there are:
 
