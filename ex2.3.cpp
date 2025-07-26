@@ -7,6 +7,9 @@ int main(int argc, char** argv){
 
     int world_rank, world_size;
     char processor_name[MPI_MAX_PROCESSOR_NAME];
+
+    //  int name_len-->  hold the lenght of the processor name
+    //  MPI sets this value when we call MPI_Get_processor_name().
     int name_len;
 
     MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
