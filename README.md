@@ -38,6 +38,6 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 *- 
   #### Exercise 2.4. Write a program where each process prints out a message reporting its number, and how many processes there are:
   * --> refer to the code ex2.4.cpp
-  * Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
-  * 
+#### exercise2.4_2 --> Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
+  *  --> refer to the code ex2.4_2.cpp
 
