@@ -37,4 +37,7 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 *  Making sure MPI processes are distributed as expected
 *- 
   #### Exercise 2.4. Write a program where each process prints out a message reporting its number, and how many processes there are:
+  * --> refer to the code ex2.4.cpp
+  * Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
+  * 
 
