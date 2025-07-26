@@ -24,3 +24,9 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 * result: we will see that again each of the MPI processes run the same program.
 
 #### Exercise 2.3. Use the command MPI_Get_processor_name. Confirm that you are able to run a program that uses two different nodes.
+*line--> char processor_name[MPI_MAX_PROCESSOR_NAME]; explanation:
+* MPI_MAX_PROCESSOR_NAME is a constant defined by MPI. It tells you the maximum length a processor name can be (usually 256 characters). we can think to it as: char processor_name[256];
+* -
+* MPI_Get_processor_name(processor_name, &name_len);--> This MPI function:--> Fills the array processor_name with the name of the processor (like node01, lrz12, ubuntu, etc.)
+* Sets name_len to the actual length of that name (number of characters).
+
