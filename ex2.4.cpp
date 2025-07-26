@@ -20,6 +20,6 @@ int main(int argc, char** argv){
     return 0;
 
 }
-//mpicpp -o ex2.4 ex2.4.cpp
+//mpic++ -o ex2.4 ex2.4.cpp
 //mpirun -np 2 ./ex2.4
 //mpirun --oversubscribe -np 4 ./ex2.4
