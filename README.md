@@ -40,4 +40,4 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
   * --> refer to the code ex2.4.cpp
 #### exercise2.4_2 --> Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
   *  --> refer to the code ex2.4_2.cpp
-
+#### Exercise 2.5. Write a program where only the process with number zero reports on how many processes there are in total.
