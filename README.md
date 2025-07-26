@@ -29,4 +29,10 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 * -
 * MPI_Get_processor_name(processor_name, &name_len);--> This MPI function:--> Fills the array processor_name with the name of the processor (like node01, lrz12, ubuntu, etc.)
 * Sets name_len to the actual length of that name (number of characters).
+#### why is it usefull to know the name of the processors?
+* its usefull for the following tasks:
+*  Debugging
+*  Load balancing
+*  Optimizing network performance
+*  Making sure MPI processes are distributed as expected
 
