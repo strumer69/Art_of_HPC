@@ -41,3 +41,21 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 #### exercise2.4_2 --> Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
   *  --> refer to the code ex2.4_2.cpp
 #### Exercise 2.5. Write a program where only the process with number zero reports on how many processes there are in total.
+* --> refer to program cpp2.5.cpp
+
+#### Exercise 2.6. Is the number N = 2, 000, 000, 111 prime? Let each process test a disjoint set of integers, and print out any factor they find. You don’t have to test all integers < N : any factor is at most √N ≈ 45, 200.
+* We want to check if: 𝑁=2,000,000,111 is a prime number.
+* A number is not prime if it has any factor i such that: 2 ≤ 𝑖 ≤ sqrt(𝑁)= 44,721
+* why? --> If N = a × b and both a and b are greater than √N, their product is greater than N. So one of them must be less than or equal to √N. --> So we only need to check the numbers 2 to 44721.
+
+##### what does (long long ) mean? :
+* long long N = 2000000111LL --> declare a 64-bit integer variable named N and assign it the value 2000000111.
+* long long--> 	A data type in C++ for large integers, usually 64 bits (can store very large numbers).
+* A normal int (typically 32 bits) can hold values only up to about 2.1 billion (2,147,483,647). 2000000111 is close to that limit. By using long long, we make sure the number fits safely.
+* The LL suffix (or ll) ensures the compiler treats the number as a long long literal, not as an int.
+
+##### int sqrtN = static_cast<int>(std::sqrt(N)); explanation:
+  * std::sqrt(N)	Calls the square root function from the standard math library (<cmath>). It returns a double (e.g. 212.13).
+  * static_cast<int>(...)	Converts the result from double to int (i.e., drops the decimal part). It's a safe and explicit type conversion in C++.
+##### int end = (world_rank == world_size - 1) ? sqrt_N : start + chunk - 1; explanation:
+* If this process is the last process, then set end = sqrt_N. Otherwise, set end = start + chunk - 1.
