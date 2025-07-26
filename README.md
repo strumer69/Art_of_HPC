@@ -15,5 +15,5 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 
 
 
-#### excercise2.2 
-compile: mpic++ excercise2.2.cpp -o a.out --> Run: mpiexec -n 2 ./a.out --> result: we will see that again each of the MPI processes run the same program.
+#### excercise2.2 Add the commands MPI_Init and MPI_Finalize to your code. Put three different print statements in your code: one before the init, one between init and finalize, and one after the finalize. Again explain the output
+* Compile: mpic++ excercise2.2.cpp -o a.out --> Run: mpiexec -n 2 ./a.out --> result: we will see that again each of the MPI processes run the same program.
