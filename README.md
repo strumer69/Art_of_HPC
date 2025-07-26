@@ -11,9 +11,16 @@ for practicing the excercises from the Book series "Art_of_HPC"
 #### excercise2.1 Write a ‘hello world’ program, without any MPI in it, and run it in parallel
 with mpiexec or your local equivalent. Explain the output.
 compile the code -->g++ ecercise2.1.cpp -o a.out
-* then run it: -->mpiexec -n 2 ./a.out  --> what is the result and why? 1- It says that without communication (MPI), all processes behave identically. 2- Once we add MPI (like MPI_Comm_rank), we can differentiate behavior per process.
+* then run it: -->mpiexec -n 2 ./a.out
+*  what is the result and why?
+*  - 1- It says that without communication (MPI), all processes behave identically.
+*  - 2- Once we add MPI (like MPI_Comm_rank), we can differentiate behavior per process.
 
 
 
 #### excercise2.2 Add the commands MPI_Init and MPI_Finalize to your code. Put three different print statements in your code: one before the init, one between init and finalize, and one after the finalize. Again explain the output
-* Compile: mpic++ excercise2.2.cpp -o a.out --> Run: mpiexec -n 2 ./a.out --> result: we will see that again each of the MPI processes run the same program.
+* Compile: mpic++ excercise2.2.cpp -o a.out 
+* Run: mpiexec -n 2 ./a.out
+* result: we will see that again each of the MPI processes run the same program.
+
+#### Exercise 2.3. Use the command MPI_Get_processor_name. Confirm that you are able to run a program that uses two different nodes.
