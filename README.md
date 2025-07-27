@@ -78,3 +78,10 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
   - some parts of the data are more computationally expensive than others.
   - for example, testing numbers for primality: higher numbers usually take longer to test.
   - If all heavy data goes to the last process, that process becomes a **bottleneck**.
+* For better distribution, we can use the following code:
+
+```cpp
+for (int i = 0; i < 10; i++) {
+    my_ints[i] = world_rank + i * world_size;
+}
+
