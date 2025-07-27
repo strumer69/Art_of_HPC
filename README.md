@@ -85,6 +85,20 @@ for (int i = 0; i < 10; i++) {
     my_ints[i] = world_rank + i * world_size;
 }
 ```
-* hi
+### For all true/false questions, if you answer that a statement is false, give a one-line explanation.
+### Exercise 2.9. * True or false: mpicc is a compiler.
+*
+* --> False – mpicc is not a compiler itself; it is a wrapper around a real compiler (like gcc) that adds the necessary MPI headers and libraries for compilation.
+* .
+* .
+### Exercise 2.10. T/F? * 1. In C, the result of **MPI_Comm_rank** is a number from zero to number-of-processes-minus-one, inclusive.
+* -->
+* True
+2. In **Fortran**, the result of MPI_Comm_rank is a number from one to number-of-processes, inclusive.
+* -->
+* True
+### Exercise 2.11. What is the function of a hostfile?
+
+* A hostfile specifies the list of nodes (computers) and optionally the number of processes to run on each when executing an MPI program using mpiexec or mpirun. It helps distribute tasks across multiple machines.
 
 
