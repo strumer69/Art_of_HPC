@@ -63,13 +63,14 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 ##### int end = (world_rank == world_size - 1) ? sqrt_N : start + chunk - 1; explanation:
 * If this process is the last process, then set end = sqrt_N. Otherwise, set end = start + chunk - 1.
 
-*   .
-*   .
-*   .
+*   
+*   
+*   
 ### Exercise 2.7.  Allocate on each process an array: int my_ints[10]; and fill it so that process 0 has the integers 0 ⋯ 9, process 1 has 10 ⋯ 19, et cetera. It may be hard to print the output in a non-messy way.
-* .
-* .
-* .
+* --> refer to ex2.7.cpp
+* #### why MPI_Barrier? 
+* In parallel programs, processes might run at different speeds. If one process finishes earlier, it might continue execution before others finish their work.Using MPI_Barrier, you can make sure that all processes reach a certain point before any of them continues
+* 
 * 
 .
 .
