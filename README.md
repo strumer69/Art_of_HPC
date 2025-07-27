@@ -85,3 +85,7 @@ for (int i = 0; i < 10; i++) {
     my_ints[i] = world_rank + i * world_size;
 }
 
+* For better distribution, we can use the following code:  
+`for (int i = 0; i < 10; i++) { my_ints[i] = world_rank + i * world_size; }`
+
+
