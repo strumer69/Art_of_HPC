@@ -74,7 +74,7 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 * 
 .
 ### Exercise 2.8. Argue that this strategy is not optimal. Can you come up with a better distribution? Load balancing is further discussed in HPC book, section-2.10. page 36/644
-* This strategy (2.7 answer) assumes that every task takes the same time. But in many real-world problems (like prime testing or scientific simulations), some parts of the data are more computationally expensive than others. for example, testing numbers for primality: higher numbers usually take longer to test.If all heavy data goes to the last process, that process becomes a **bottleneck**.
-
-➡️ This leads to load imbalance:
-Some processes finish early and sit idle, while others are still working.
+* This strategy (2.7 answer) assumes that every task takes the same time. But in many real-world problems (like prime testing or scientific simulations),
+  - some parts of the data are more computationally expensive than others.
+  - for example, testing numbers for primality: higher numbers usually take longer to test.
+  - If all heavy data goes to the last process, that process becomes a **bottleneck**.
