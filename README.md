@@ -8,7 +8,7 @@ for practicing the excercises from the Book series "Art_of_HPC"
 ## Volum 2 : practical
 * https://github.com/VictorEijkhout/TheArtofHPC_pdfs/blob/main/vol2/EijkhoutParallelProgramming.pdf
 * 
-#### excercise2.1 Write a ‘hello world’ program, without any MPI in it, and run it in parallel
+### excercise2.1 Write a ‘hello world’ program, without any MPI in it, and run it in parallel
 with mpiexec or your local equivalent. Explain the output.
 compile the code -->g++ ecercise2.1.cpp -o a.out
 * then run it: -->mpiexec -n 2 ./a.out
@@ -18,12 +18,12 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 
 
 
-#### excercise2.2 Add the commands MPI_Init and MPI_Finalize to your code. Put three different print statements in your code: one before the init, one between init and finalize, and one after the finalize. Again explain the output
+### excercise2.2 Add the commands MPI_Init and MPI_Finalize to your code. Put three different print statements in your code: one before the init, one between init and finalize, and one after the finalize. Again explain the output
 * Compile: mpic++ excercise2.2.cpp -o a.out 
 * Run: mpiexec -n 2 ./a.out
 * result: we will see that again each of the MPI processes run the same program.
 
-#### Exercise 2.3. Use the command MPI_Get_processor_name. Confirm that you are able to run a program that uses two different nodes.
+### Exercise 2.3. Use the command MPI_Get_processor_name. Confirm that you are able to run a program that uses two different nodes.
 *line--> char processor_name[MPI_MAX_PROCESSOR_NAME]; explanation:
 * MPI_MAX_PROCESSOR_NAME is a constant defined by MPI. It tells you the maximum length a processor name can be (usually 256 characters). we can think to it as: char processor_name[256];
 * -
@@ -38,12 +38,12 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 *- 
   #### Exercise 2.4. Write a program where each process prints out a message reporting its number, and how many processes there are:
   * --> refer to the code ex2.4.cpp
-#### exercise2.4_2 --> Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
+### exercise2.4_2 --> Write a second version of this program, where each process opens a unique file and writes to it. On some clusters this may not be advisable if you have large numbers of processors, since it can overload the file system.
   *  --> refer to the code ex2.4_2.cpp
-#### Exercise 2.5. Write a program where only the process with number zero reports on how many processes there are in total.
+### Exercise 2.5. Write a program where only the process with number zero reports on how many processes there are in total.
 * --> refer to program cpp2.5.cpp
 
-#### Exercise 2.6. Is the number N = 2, 000, 000, 111 prime? Let each process test a disjoint set of integers, and print out any factor they find. You don’t have to test all integers < N : any factor is at most √N ≈ 45, 200.
+### Exercise 2.6. Is the number N = 2, 000, 000, 111 prime? Let each process test a disjoint set of integers, and print out any factor they find. You don’t have to test all integers < N : any factor is at most √N ≈ 45, 200.
 * We want to check if: 𝑁=2,000,000,111 is a prime number.
 * A number is not prime if it has any factor i such that: 2 ≤ 𝑖 ≤ sqrt(𝑁)= 44,721
 * why? --> If N = a × b and both a and b are greater than √N, their product is greater than N. So one of them must be less than or equal to √N. --> So we only need to check the numbers 2 to 44721.
@@ -57,5 +57,19 @@ compile the code -->g++ ecercise2.1.cpp -o a.out
 ##### int sqrtN = static_cast<int>(std::sqrt(N)); explanation:
   * std::sqrt(N)	Calls the square root function from the standard math library (<cmath>). It returns a double (e.g. 212.13).
   * static_cast<int>(...)	Converts the result from double to int (i.e., drops the decimal part). It's a safe and explicit type conversion in C++.
+  * .
+  * .
+  * .
 ##### int end = (world_rank == world_size - 1) ? sqrt_N : start + chunk - 1; explanation:
 * If this process is the last process, then set end = sqrt_N. Otherwise, set end = start + chunk - 1.
+
+*   .
+*   .
+*   .
+### Exercise 2.7.  Allocate on each process an array: int my_ints[10]; and fill it so that process 0 has the integers 0 ⋯ 9, process 1 has 10 ⋯ 19, et cetera. It may be hard to print the output in a non-messy way.
+* .
+* .
+* .
+* 
+.
+.
