@@ -123,6 +123,7 @@ for (int i = 0; i < 10; i++) {
   #### 2-  Each process computes a random number again. Now you want to scale these numbers by their maximum
 
 * #### answer 2 --> refer to the program ex3.1.2.cpp
+* the difference between MPI_Reduce and MPI_Allreduce is that in MPI_reduce the value will be sent only to the root proc but in the MPI_ALlreduce it will send to root and also all the procs.
 
   
 
