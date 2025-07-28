@@ -105,6 +105,9 @@ for (int i = 0; i < 10; i++) {
 * 1-  Let each process compute a random number. You want to print the maximum of these numbers to your screen. 
 * 2-  Each process computes a random number again. Now you want to scale these numbers by their maximum
 * #### answer 1 --> refer to the program ex3.1.1.cpp
+* MPI_Reduce(image ref: page 38/644 the book art of HPC - Vo,um 2):
+* <img width="463" height="355" alt="image" src="https://github.com/user-attachments/assets/601c957e-c022-4403-ae06-4ed6c7307943" />
+
 * explanation:
 ```cpp
   MPI_Reduce(&local_rand, &max_rand, 1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
