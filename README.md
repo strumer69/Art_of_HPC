@@ -102,6 +102,14 @@ for (int i = 0; i < 10; i++) {
 * A hostfile specifies the list of nodes (computers) and optionally the number of processes to run on each when executing an MPI program using mpiexec or mpirun. It helps distribute tasks across multiple machines.
 
 ### Exercise 3.1. How would you realize the following scenarios with MPI collectives?
-1-  Let each process compute a random number. You want to print the maximum of these numbers to your screen.
-2-  Each process computes a random number again. Now you want to scale these numbers by their maximum
+* 1-  Let each process compute a random number. You want to print the maximum of these numbers to your screen. 
+* 2-  Each process computes a random number again. Now you want to scale these numbers by their maximum
+* #### answer 1 --> refer to the program ex3.1.1.cpp
+* explanation:
+```cpp
+  MPI_Reduce(&local_rand, &max_rand, 1, MPI_INT, MPI_MAX, 0, MPI_COMM_WORLD);
+```
+* what is being reduced? --> The integer local_rand from each process being transfered to the root (usually rank 0)
+* The reduction operation is **MPI_MAX**, so the maximum of all local_rand values is computed.
+
 
