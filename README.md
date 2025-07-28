@@ -105,7 +105,7 @@ for (int i = 0; i < 10; i++) {
 * 1-  Let each process compute a random number. You want to print the maximum of these numbers to your screen. 
 * 2-  Each process computes a random number again. Now you want to scale these numbers by their maximum
 * #### answer 1 --> refer to the program ex3.1.1.cpp
-* MPI_Reduce(image ref: page 38/644 the book art of HPC - Vo,um 2):
+* MPI_Reduce(image ref: page 38/644 the book art of HPC - Volum 2):
 * <img width="463" height="355" alt="image" src="https://github.com/user-attachments/assets/601c957e-c022-4403-ae06-4ed6c7307943" />
 
 * explanation:
@@ -114,5 +114,14 @@ for (int i = 0; i < 10; i++) {
 ```
 * what is being reduced? --> The integer local_rand from each process being transfered to the root (usually rank 0)
 * The reduction operation is **MPI_MAX**, so the maximum of all local_rand values is computed.
+*  who is the sender?
+*  all the the processes in MPI_COMM_WORLD send their local_rand to participate in reduction.
+* Since MPI_Reduce expects pointers to the input and output data (not the values themselves), you pass &local_rand and &max_rand so  the (&) in (&local_rand) --> gives the memory address of the variable.
+* 1th argument--> &local_rand --> what is being sent.
+* 2th argument --> &max_rand --> where the result will be stored.
+* 5th argument --> MPI_MAX --> This specifies the reduction operation.
+
+
+  
 
 
