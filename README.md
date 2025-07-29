@@ -126,5 +126,5 @@ for (int i = 0; i < 10; i++) {
 * the difference between MPI_Reduce and MPI_Allreduce is that in MPI_reduce the value will be sent only to the root proc but in the MPI_ALlreduce it will send to root and also all the procs.
 
   
-
+#### 3. Let each process compute a random number. You want to print on what processor the maximum value is computed.
 
