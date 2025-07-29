@@ -128,4 +128,8 @@ for (int i = 0; i < 10; i++) {
   
 #### 3. Let each process compute a random number. You want to print on what processor the maximum value is computed.
 * ANSWER --> ?
+### Exercise 3.2. Let each process compute a random number, and compute the sum of these numbers using the MPI_Allreduce routine.
+* ξ = ∑ xi
 
+* Each process then scales its value by this sum. -->  xi ′ ← xi/ξ
+* Compute the sum of the scaled numbers --> ξ ′ = ∑ xi ′ and check that it is 1.
