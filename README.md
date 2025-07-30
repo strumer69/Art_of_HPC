@@ -131,5 +131,5 @@ for (int i = 0; i < 10; i++) {
 ### Exercise 3.2. Let each process compute a random number, and compute the sum of these numbers using the MPI_Allreduce routine.
 * ξ = ∑ xi --> answer: ex3.2.cpp
 
-* Each process then scales its value by this sum. -->  xi ′ ← xi/ξ
+* Each process then scales its value by this sum. -->  xi ′ ← xi/ξ --> answer: ex3.2.1.cpp
 * Compute the sum of the scaled numbers --> ξ ′ = ∑ xi ′ and check that it is 1.
