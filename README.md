@@ -138,7 +138,7 @@ for (int i = 0; i < 10; i++) {
     - the sum of the values equals 1.
 ### Exercise 3.3. Implement a (very simple-minded) Fourier transform: if f is a function on the interval [0, 1], then the n-th Fourier coefficient is
 <img width="725" height="295" alt="image" src="https://github.com/user-attachments/assets/b7ddfa6e-c8be-4f46-a6c9-3a55356a50ba" />
-• Make one distributed array for the e −inh coefficients,
-• make one distributed array for the f (ih) values
-• calculate a couple of coefficients
+*  Make one distributed array for the e −inh coefficients,
+*  make one distributed array for the f (ih) values
+*  calculate a couple of coefficients
 
