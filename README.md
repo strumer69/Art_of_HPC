@@ -132,4 +132,6 @@ for (int i = 0; i < 10; i++) {
 * ξ = ∑ xi --> answer: ex3.2.cpp
 
 * Each process then scales its value by this sum. -->  xi ′ ← xi/ξ --> answer: ex3.2.1.cpp
+  - learn how to have organized printOut by using MPI_Barrier
+  - also how to correctly use double to have nonzero scaling.
 * Compute the sum of the scaled numbers --> ξ ′ = ∑ xi ′ and check that it is 1.
