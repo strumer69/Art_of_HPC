@@ -151,4 +151,7 @@ for (int i = 0; i < 10; i++) {
   * **Loss of Parallelism** -->  Once all data is on one processor, the remaining processors sit idle while only one does the work.
   * Gathering everything on one processor is inefficient and unscalable for large problems. The **strength of MPI** lies in distributed computation, where work is balanced across all available processors while minimizing communication
     ### Exercise 3.5.The Gram-Schmidt method is a simple way to orthogonalize two vectors: Implement this, and check that the result is indeed orthogonal.
+    * --> answer : ?
+### Exercise 3.6. Write a program where each process computes a random number, and process 0 finds and prints the maximum generated value. Let each process print its value, just to check the correctness of your program.
+* --> answer : ex3.6.cpp
 
