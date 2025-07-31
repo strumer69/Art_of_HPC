@@ -141,7 +141,13 @@ for (int i = 0; i < 10; i++) {
 
 * 
 *
--  Make one distributed array for the e −inh coefficients,
+-  Make one distributed array for the e^(−inh) coefficients,
 -  make one distributed array for the f (ih) values
 -  calculate a couple of coefficients
+-  answer --> ?
+  ### Exercise 3.4. In the previous exercise you worked with a distributed array, computing a local quantity and combining that into a global quantity. Why is it not a good idea to gather the whole distributed array on a single processor, and do all the computation locally?
+  * If the distributed array is very large (e.g., millions or billions of elements), gathering it on one processor may exceed its available memory.
+  * Gathering all data on a single node requires significant MPI communication (e.g., MPI_Gather), which can be slow, especially in distributed-memory systems.-->The time spent transferring data may dominate the actual computation, leading to poor scalability.
+  * **Loss of Parallelism** -->  Once all data is on one processor, the remaining processors sit idle while only one does the work.
+  * Gathering everything on one processor is inefficient and unscalable for large problems. The **strength of MPI** lies in distributed computation, where work is balanced across all available processors while minimizing communication
 
