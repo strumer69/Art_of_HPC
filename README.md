@@ -156,4 +156,7 @@ for (int i = 0; i < 10; i++) {
 * --> answer : ex3.6.cpp
 ### Exercise 3.7. Create on each process an array of length 2 integers, and put the values 1, 2 in it on each process. Do a sum reduction on that array. Can you predict what the result should be? Code it. Was your prediction right?
 * --> answer: ex3.7.cpp
-* 
+
+  ## Free  exercices :
+### 1-write a MPI code to multiply two matrix:
+* --> solution : mpi_1.cpp
