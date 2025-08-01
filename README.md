@@ -154,4 +154,6 @@ for (int i = 0; i < 10; i++) {
     * --> answer : ?
 ### Exercise 3.6. Write a program where each process computes a random number, and process 0 finds and prints the maximum generated value. Let each process print its value, just to check the correctness of your program.
 * --> answer : ex3.6.cpp
-
+### Exercise 3.7. Create on each process an array of length 2 integers, and put the values 1, 2 in it on each process. Do a sum reduction on that array. Can you predict what the result should be? Code it. Was your prediction right?
+* --> answer: ex3.7.cpp
+* 
